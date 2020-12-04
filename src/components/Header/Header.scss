@@ -1,14 +1,16 @@
 .header {
   width: 100%;
   height: auto;
-  background: #fefe;
+  background: #bcc4bc;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 0;
+  
   h1 {
     font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: 2px;
+    color: #785E57;
   }
 }

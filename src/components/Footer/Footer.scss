@@ -1,15 +1,16 @@
 .footer {
   width: 100%;
   height: auto;
-  background: #fefe;
+  background: #BCC4BC;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   position: absolute;
   bottom: 0;
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: #FAF9F5;
   }
 }
