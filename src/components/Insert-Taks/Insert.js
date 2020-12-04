@@ -3,12 +3,13 @@ import "./Insert.css";
 
 const Insert = () => {
   const [todo, setTodo] = useState("");
-  
 
   const handleTodoChange = (event) => {
     event.preventDefault();
     setTodo(event.target.value);
   };
+
+  const disabled = todo.length > 0 ? false : true
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,7 +29,7 @@ const Insert = () => {
         value={todo}
       />
 
-      <button type="submit" disabled={ todo.length > 0 ? false : true }>
+      <button type="submit" disabled={ disabled }>
         add
       </button>
     </form>
