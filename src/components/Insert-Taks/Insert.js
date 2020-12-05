@@ -13,7 +13,6 @@ const Insert = (props) => {
     event.preventDefault();
     props.addTask(todo);
     setTodo('')
-    alert(todo);
   };
 
   const disabled = todo.length > 0 ? false : true
