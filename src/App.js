@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Insert from "./components/InsertTaks/Insert";
+import Insert from "./components/InsertTasks/Insert";
 import TodoTask from "./components/TodoTask/TodoTask";
 
 function App(props) {
@@ -15,6 +15,7 @@ function App(props) {
       completed={task.completed}
       key={task.id}
       delete={deleteTask}
+      handleCheckbox={handleCheckbox}
     />
   ));
 
@@ -27,6 +28,16 @@ function App(props) {
   function deleteTask(id) {
     const remainingTasks = tasks.filter((task) => id !== task.id);
     setTasks(remainingTasks);
+  }
+
+  function handleCheckbox(id) {
+    const updatedTasks = tasks.map((task) => {
+      if (id === task.id) {
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
   }
 
   return (
