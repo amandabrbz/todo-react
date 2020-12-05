@@ -22,15 +22,7 @@ const Insert = (props) => {
     <>
       <form className="insert-task" onSubmit={handleSubmit}>
         <label htmlFor="myToDo">today todos</label>
-        <input
-          type="text"
-          placeholder="type something todo today..."
-          name="myToDo"
-          onChange={handleTodoChange}
-          value={todo}
-          autoComplete="off"
-        />
-
+        <input type="text" placeholder="type something todo today..." name="myToDo" onChange={handleTodoChange} value={todo} autoComplete="off" />
         <button type="submit" disabled={disabled}>
           save it
         </button>

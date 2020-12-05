@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
-      <h1>to dos react app</h1>
+      <h1>todos list in react</h1>
     </header>
   )
 }
