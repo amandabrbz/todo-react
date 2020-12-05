@@ -13,8 +13,9 @@ const Todo = (props) => {
           <div className="task-delete">
             <button
               type="button"
+              onClick={() => props.delete(props.id)}
             >
-              Delete
+              delete it
             </button>
           </div>
         )}
