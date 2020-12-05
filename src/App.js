@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Insert from "./components/InsertTasks/Insert";
 import TodoTask from "./components/TodoTask/TodoTask";
+import {LinkTo} from "./components/Link/Link";
 
 function App(props) {
   const [tasks, setTasks] = useState(props.data);
@@ -43,10 +45,17 @@ function App(props) {
   return (
     <>
       <Header />
-      <Insert addTask={addTask} />
-      <ul>
-        {taskItems}
-      </ul>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Insert addTask={addTask} />
+          </Route>
+          <Route path="/tasks">
+            <ul>{taskItems}</ul>
+            <LinkTo link="/" whereTo="home" />
+          </Route>
+        </Switch>
+      </Router>
       <Footer />
     </>
   );
