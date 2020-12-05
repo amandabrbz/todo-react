@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Insert.css";
 
-const Insert = () => {
+const Insert = (props) => {
   const [todo, setTodo] = useState("");
 
   const handleTodoChange = (event) => {
@@ -9,14 +9,14 @@ const Insert = () => {
     setTodo(event.target.value);
   };
 
-  const disabled = todo.length > 0 ? false : true
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    return console.log({
-      todo,
-    });
+    props.addTask(todo);
+    setTodo('')
+    alert(todo);
   };
+
+  const disabled = todo.length > 0 ? false : true
 
   return (
     <form className="insert-task" onSubmit={handleSubmit}>
@@ -27,6 +27,7 @@ const Insert = () => {
         name="myToDo"
         onChange={handleTodoChange}
         value={todo}
+        autoComplete="off"
       />
 
       <button type="submit" disabled={ disabled }>

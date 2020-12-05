@@ -1,14 +1,19 @@
+import React from "react";
 import "./App.css";
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Insert from './components/Insert-Taks/Insert';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Insert from "./components/Insert-Taks/Insert";
 
-function App() {
+function App(props) {
+  function addTask(name) {
+    alert(name);
+  }
+
   return (
     <>
-      <Header/>
-      <Insert/>
-      <Footer/>
+      <Header />
+      <Insert addTask={addTask} />
+      <Footer />
     </>
   );
 }
