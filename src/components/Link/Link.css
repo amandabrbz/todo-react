@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.links {
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center; }
+
+.links .link {
+  text-decoration: none;
+  font-size: .875rem;
+  color: #232423;
+  transition: all .2ms ease; }
+
+.links .link::after {
+  content: '⇾';
+  margin-left: 10px;
+  font-size: 1.2rem;
+  line-height: .875rem; }
+
+.links .link:hover {
+  font-weight: bold;
+  color: #4E4B3E; }
