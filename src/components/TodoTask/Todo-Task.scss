@@ -1,0 +1,42 @@
+.task-item {
+  max-width: 900px;
+  margin: 0 auto;
+
+  .task-box {
+    max-height: 100px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    input[type="checkbox"] {
+      -webkit-font-smoothing: antialiased;
+      cursor: pointer;
+      outline: 1px dashed #785e57;
+    }
+    label {
+      font-size: 1.25rem;
+      color: #4e4b3e;
+      font-weight: bold;
+      &.done {
+        text-decoration: line-through;
+        color: #232423aa;
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+    .task-delete {
+      display: inline;
+      button {
+        cursor: pointer;
+        font-weight: bold;
+        background: #785e57;
+        border: none;
+        outline: 1px dashed #785e57;
+        padding: 5px 15px;
+        color: #faf9f5;
+      }
+    }
+  }
+}

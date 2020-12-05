@@ -1,0 +1,40 @@
+.task-item {
+  max-width: 900px;
+  margin: 0 auto; }
+
+.task-item .task-box {
+  max-height: 100px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.task-item .task-box input[type="checkbox"] {
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  outline: 1px dashed #785e57; }
+
+.task-item .task-box label {
+  font-size: 1.25rem;
+  color: #4e4b3e;
+  font-weight: bold; }
+
+.task-item .task-box label.done {
+  text-decoration: line-through;
+  color: #232423aa;
+  font-weight: normal;
+  font-style: italic; }
+
+.task-item .task-box .task-delete {
+  display: inline; }
+
+.task-item .task-box .task-delete button {
+  cursor: pointer;
+  font-weight: bold;
+  background: #785e57;
+  border: none;
+  outline: 1px dashed #785e57;
+  padding: 5px 15px;
+  color: #faf9f5; }
