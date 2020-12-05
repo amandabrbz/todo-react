@@ -30,7 +30,7 @@ const Insert = (props) => {
       />
 
       <button type="submit" disabled={ disabled }>
-        add
+        save it
       </button>
     </form>
   );
